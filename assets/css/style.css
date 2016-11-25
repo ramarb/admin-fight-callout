@@ -1,0 +1,160 @@
+@font-face {font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular/Montserrat-Regular.eot");
+    src: url("../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Montserrat-Regular/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype"),
+    url("../fonts/Montserrat-Regular/Montserrat-Regular.svg#Montserrat") format("svg");
+}
+
+@font-face {font-family: "Federal Escort";
+    src: url("../fonts/FederalEscortRegular/FederalEscortRegular.eot");
+    src: url("../fonts/FederalEscortRegular/FederalEscortRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FederalEscortRegular/FederalEscortRegular.woff2") format("woff2"),
+    url("../fonts/FederalEscortRegular/FederalEscortRegular.woff") format("woff"),
+    url("../fonts/FederalEscortRegular/FederalEscortRegular.ttf") format("truetype"),
+    url("../fonts/FederalEscortRegular/FederalEscortRegular.svg#Federal Escort") format("svg");
+}
+
+
+
+body{
+
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, Montserrat;
+}
+
+h1{
+    font-family: "Federal Escort";
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {height: 1500px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+header {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+.collapse{
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.list-group{
+    margin-bottom: 3px;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height: auto;}
+}
+
+.alert p{
+    padding:0;
+    margin:0;
+}
+
+.spacer{
+    display: block;
+    height: 15px;
+}
+
+.b_red{
+    border: solid red 1px;
+}
+
+.paging_simple_numbers .pagination li{
+    border:solid #e3e3e3 1px;
+    display:inline-block;
+    margin: 0 0 0 5px;
+    border-radius:3px;
+}
+.paging_simple_numbers .pagination li a{
+    padding: 3px 8px;
+}
+.tr-clickable{
+    cursor: pointer;
+}
+
+.active td{
+    background-color: skyblue;
+}
+
+.btn.disabled{
+    background-color:gray;
+    border:solid gray 1px;
+}
+
+.active-child{
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+div.callout-detail div.row div{
+    padding: 5px 5px
+}
+
+div.callout-detail{
+    border:solid #e3e3e3 1px;
+
+}
+div.callout-detail div.row{
+    border-bottom: solid #e3e3e3 1px;;
+}
+
+div.callout-detail div.row:last-child{
+    border-bottom: none;
+}
+
+.callout-detail{
+
+    width:800px;
+    margin-left: 20px;
+}
+
+.callout-view-header{
+    padding: 9px 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #f1f1f1;
+}
+
+.collapsible{
+    font-family:"Federal Escort"
+}
+
+th{
+    font-family:"Federal Escort";
+    white-space: nowrap;
+}
+.welcome-user{
+    font-family:"Federal Escort";
+}
+
+h2{
+    font-family:"Federal Escort";
+}
+
+.callout-view-header{
+    font-family:"Federal Escort";
+}
+button{
+    font-family:"Federal Escort";
+}
