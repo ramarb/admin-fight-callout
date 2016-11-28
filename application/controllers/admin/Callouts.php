@@ -34,13 +34,51 @@ class Callouts extends MY_Controller_Admin {
 
         try{
             $result = $this->callouts->read_callout_by_id($id);
+            $categories = $this->callouts->read_sports_categories();
+            $comments = $this->callouts->read_callout_comments_by_callout_id($id);
         }catch (Exception $e){
 
             $this->set_alert_message('danger','ha;a');
         }
         $this->js_variables['controller_method'] = 'callouts';
-        $this->render('callouts_view',array('callout'=>$result));
+        $this->render('callouts_view',
+            array(
+                'callout'=>$result,
+                'categories'=>$categories,
+                'callout_category_id'=>$this->input->post('callout_category_id'),
+                'comments' => $comments
+            )
+        );
     }
+
+    function validate_update_callout_form(){
+
+        $config = array(
+            array('field' => 'callout_description', 'label' => 'Description', 'rules' => 'required'),
+            array('field' => 'callout_category_id', 'label' => 'Category', 'rules' => 'required'),
+        );
+
+        $this->form_validation->set_rules($config);
+
+        if($this->form_validation->run() === true){
+            try{
+                $this->callouts->update($this->input->post());
+
+                $this->callouts->log_event($this->user->id, $this->input->post('callout_id'),'Edited');
+                $this->set_alert_message('success',SAVE_SUCCESS_MESSAGE,true);
+                redirect('admin/callouts/detail/'.$this->input->post('callout_id'));
+            }catch(Exception $e){
+                $this->set_alert_message('danger',$e->getMessage());
+            }
+        }else{
+            $this->set_alert_message('danger',validation_errors());
+        }
+
+        $this->detail($this->input->post('callout_id'));
+
+    }
+
+
 
     public function report(){
         $reports = array();
@@ -128,7 +166,6 @@ class Callouts extends MY_Controller_Admin {
         try{
             $roles = $this->callouts->read_roles(true);
             $user = $this->callouts->read_user_by_id($user_id)->row();
-            //p($user,1);
             $this->render('admin_user_edit',array('roles'=>$roles,'data_user'=>$user));
         }catch(Exception $e){
             die('Internal Server error!');
@@ -168,6 +205,11 @@ class Callouts extends MY_Controller_Admin {
         $return = array('success' => 1);
         try{
             $this->callouts->status_update($table,$status,$ids);
+            if($table === 'callouts'){
+                foreach($ids as $id){
+                    $this->callouts->log_event($this->user->id, $id,(($status)==='A')?'Activated':'Deleted');
+                }
+            }
             $this->set_alert_message('success',"Update successful...",true);
         }catch(Exception $e){
             $this->set_alert_message('danger',$e->getMessage(),true);

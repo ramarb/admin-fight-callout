@@ -128,11 +128,36 @@ class Callouts_model extends CI_Model {
         $sql = "SELECT
                   callouts.*,
                   categories.description category,
-                  CONCAT(users.first_name,' ',users.last_name) AS full_name
+                  CONCAT(users.first_name,' ',users.last_name) AS full_name,
+                  (SELECT
+					CONCAT(logs.action,' By ',editor.first_name,' ', editor.last_name, ' on ', logs.created_at)
+                    FROM logs
+                    INNER JOIN users AS editor ON editor.id = logs.user_id
+                    WHERE logs.callout_id = callouts.id
+
+                    ORDER by logs.created_at DESC
+                    LIMIT 1
+				  ) as editors_detail
                 FROM callouts
                 INNER JOIN categories ON categories.id = callouts.category_id
                 INNER JOIN users ON users.id = callouts.user_id
                 WHERE callouts.id = {$id}";
+        return $this->common($sql);
+    }
+
+    /**
+     * @param $callout_id
+     * @return array
+     */
+    public function read_callout_comments_by_callout_id($callout_id){
+        check_int($callout_id);
+        $sql = "SELECT
+                  comments.*,
+                  CONCAT(users.first_name,' ',users.last_name) AS full_name
+                FROM comments
+                INNER JOIN users ON users.id = comments.user_id
+                WHERE callout_id = {$callout_id}
+                ORDER BY comments.updated_at DESC";
         return $this->common($sql);
     }
 
@@ -236,6 +261,31 @@ class Callouts_model extends CI_Model {
         }else{
             throw new RuntimeException('username or email already exist',400);
         }
+    }
+
+    public function update($data){
+
+        $sql = "UPDATE callouts
+            SET
+              `title` = ".$this->db->escape($data['title']).",
+              `description` = ".$this->db->escape($data['callout_description']).",
+              `fighter_a` = ".$this->db->escape($data['fighter_a']).",
+              `fighter_b` = ".$this->db->escape($data['fighter_b']).",
+              `details_venue` = ".$this->db->escape($data['details_venue']).",
+              `category_id` = ".$this->db->escape($data['callout_category_id']).",
+              `match_type` = ".$this->db->escape($data['match_type']).",
+              `broadcast_url` = ".$this->db->escape($data['broadcast_url']).",
+              `details_date` = ".$this->db->escape($data['details_date']).",
+              `details_time` = ".$this->db->escape($data['details_time'])."
+            WHERE id = ".(int)$data['callout_id'].";";
+
+        return $this->common($sql);
+    }
+
+    public function log_event($user_id, $callout_id, $action){
+        //p($callout_id,1);
+        $sql = "INSERT INTO logs(`user_id`,`callout_id`,`action`) VALUES(".$this->db->escape($user_id).",".$this->db->escape($callout_id).",".$this->db->escape($action)." )";
+        return $this->common($sql);
     }
 
 }

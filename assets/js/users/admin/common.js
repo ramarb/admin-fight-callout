@@ -6,6 +6,9 @@ $(document).ready(function(){
     $(".status-display:contains('Deleted')").css('color','red');
     $(".status-display:contains('Active')").css('color','green');
 
+    $('.status-display[value="Deleted"]').addClass('red');
+    $('.status-display[value="Active"]').addClass('green');
+
     $('.sortable').DataTable();
 
     $(".user-data-table").DataTable({"order":[[2,'asc']]});
@@ -92,6 +95,36 @@ $(document).ready(function(){
             },'json');
         }
     });
+
+
+    $("#delete-record-comment, #activate-record-comment").on('click',function(){
+        
+            var orig_html = $(this).html();
+            var preloader = $("#button-preloader").html();
+            var ids = [];
+            var url = base_uri + '/update_status';
+
+
+            $.each($('input.comments:checked'),function(index, value){
+                ids.push($(this).val());
+            });
+
+            if(ids.length > 1){
+                $(this).html(preloader);
+                var post = {
+                    category_ids:ids,
+                    table_name:'comments',
+                    status:((orig_html==='Delete')?'D':'A')
+                }
+
+                $.post(url,post,function(data){
+                    location.reload();
+                },'json');
+            }
+
+    });
+
+
 
     $("#description").keyup(function(){
         var description = $(this).val();

@@ -46,3 +46,4 @@
     <button id="activate-record" class="btn btn-success">Activate</button>
     <input type="hidden" class="" id="table_name" placeholder="" name="table" value="users">
 </div>
+
