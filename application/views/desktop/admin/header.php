@@ -1,7 +1,7 @@
 <?php $this->load->view('desktop/common/top_header')?>
 
 <div class="row content">
-    <div class="col-sm-3 sidenav">
+    <div class="col-sm-3 sidenav" id="page-navigation-wrapper">
         <div class="spacer"></div>
         <div class="list-group">
             <a href="#" id="user-menu" class="list-group-item active collapsible" status="1">
@@ -37,7 +37,7 @@
 
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-9" style="" id="page-content-body">
         <?php if($alert_type != ''):?>
             <div class="spacer"></div>
             <?php $this->load->view('desktop/common/alert',array('alert_type'=>$alert_type,'alert_message'=>$alert_message))?>

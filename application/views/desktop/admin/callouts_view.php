@@ -117,8 +117,26 @@
             <div class="col-sm-7">
                 <input type="text" name="status" value="<?php echo $callout->editors_detail?>" class="form-control status-display" id="status" placeholder="" disabled>
             </div>
-
         </div>
+
+        <?php if((int)$callout->video > 0):?>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Video:</label>
+                <div class="col-sm-7">
+                    <div class="embed-responsive embed-responsive-4by3">
+
+                        <video width="400" <?php echo (((int)$callout->photo > 0)?'poster="http://api.fightcallout.com/api/v1.0/uploads/'.$callout->photo.'"':"")?> controls>
+                            <source src="http://api.fightcallout.com/api/v1.0/uploads/<?php echo $callout->video?>" type="video/mp4">
+                            <source src="http://api.fightcallout.com/api/v1.0/uploads/<?php echo $callout->video?>" type="video/quicktime">
+                            <source src="http://api.fightcallout.com/api/v1.0/uploads/<?php echo $callout->video?>" type="video/ogg">
+                            <source src="http://api.fightcallout.com/api/v1.0/uploads/<?php echo $callout->video?>" type="video/webM">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        <?php endif;?>
 
         <div class="form-group row">
             <div class="offset-sm-3 col-sm-5">
@@ -137,19 +155,20 @@
     <?php endif;?>
 </div>
 <?php if(isset($comments->result_id) && $comments->result_id->num_rows > 0):?>
-    <h2>Comments</h2>
-    <table class="table table-bordered sortable" id="callout-list">
-        <thead>
-        <tr>
-            <th>User</th>
-            <th>Comment</th>
-            <th>Date Created</th>
-            <th>Date Updated</th>
-            <th>Status</th>
-            <th>&nbsp;</th>
-        </tr>
-        </thead>
-        <tbody>
+    <div class="container">
+        <h2>Comments</h2>
+        <table class="table table-bordered sortable" id="callout-list">
+            <thead>
+            <tr>
+                <th>User</th>
+                <th>Comment</th>
+                <th>Date Created</th>
+                <th>Date Updated</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
             <?php foreach($comments->result() as $index => $values):?>
                 <tr>
                     <td><?php echo $values->full_name?></td>
@@ -162,11 +181,16 @@
                     </td>
                 </tr>
             <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="float-md-right">
-        <button id="delete-record-comment" class="btn btn-danger" data-table="comments">Delete</button>
-        <button id="activate-record-comment" class="btn btn-success" data-table="comments">Activate</button>
+            </tbody>
+        </table>
+        <div class="float-md-right">
+            <button id="delete-record-comment" class="btn btn-danger" data-table="comments">Delete</button>
+            <button id="activate-record-comment" class="btn btn-success" data-table="comments">Activate</button>
+        </div>
     </div>
+    <div class="spacer"></div>
+    <script type="text/javascript">
+        var callout_has_comment = 1;
+    </script>
 <?php endif;?>
 

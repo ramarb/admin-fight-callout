@@ -138,6 +138,7 @@ class Callouts_model extends CI_Model {
                     ORDER by logs.created_at DESC
                     LIMIT 1
 				  ) as editors_detail
+
                 FROM callouts
                 INNER JOIN categories ON categories.id = callouts.category_id
                 INNER JOIN users ON users.id = callouts.user_id

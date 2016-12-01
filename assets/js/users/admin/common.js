@@ -2,6 +2,13 @@
  * Created by ramon on 11/23/16.
  */
 $(document).ready(function(){
+    if(typeof callout_has_comment !== undefined){
+        var total_height = ($("#page-content-body").height() + 100) + 'px';
+        $("#page-navigation-wrapper").css('height',total_height)
+    }
+
+    //
+    //alert(total_height);
 
     $(".status-display:contains('Deleted')").css('color','red');
     $(".status-display:contains('Active')").css('color','green');
@@ -98,32 +105,30 @@ $(document).ready(function(){
 
 
     $("#delete-record-comment, #activate-record-comment").on('click',function(){
-        
-            var orig_html = $(this).html();
-            var preloader = $("#button-preloader").html();
-            var ids = [];
-            var url = base_uri + '/update_status';
+
+        var orig_html = $(this).html();
+        var preloader = $("#button-preloader").html();
+        var ids = [];
+        var url = base_uri + '/update_status';
 
 
-            $.each($('input.comments:checked'),function(index, value){
-                ids.push($(this).val());
-            });
+        $.each($('input.comments:checked'),function(index, value){
+            ids.push($(this).val());
+        });
 
-            if(ids.length > 1){
-                $(this).html(preloader);
-                var post = {
-                    category_ids:ids,
-                    table_name:'comments',
-                    status:((orig_html==='Delete')?'D':'A')
-                }
-
-                $.post(url,post,function(data){
-                    location.reload();
-                },'json');
+        if(ids.length > 1){
+            $(this).html(preloader);
+            var post = {
+                category_ids:ids,
+                table_name:'comments',
+                status:((orig_html==='Delete')?'D':'A')
             }
 
+            $.post(url,post,function(data){
+                location.reload();
+            },'json');
+        }
     });
-
 
 
     $("#description").keyup(function(){
