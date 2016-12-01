@@ -115,8 +115,8 @@ $(document).ready(function(){
         $.each($('input.comments:checked'),function(index, value){
             ids.push($(this).val());
         });
-
-        if(ids.length > 1){
+        //alert(ids.length);
+        if(ids.length > 0){
             $(this).html(preloader);
             var post = {
                 category_ids:ids,
