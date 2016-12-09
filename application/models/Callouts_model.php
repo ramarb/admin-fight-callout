@@ -276,6 +276,7 @@ class Callouts_model extends CI_Model {
               `category_id` = ".$this->db->escape($data['callout_category_id']).",
               `match_type` = ".$this->db->escape($data['match_type']).",
               `broadcast_url` = ".$this->db->escape($data['broadcast_url']).",
+              `ticket_url` = ".$this->db->escape($data['ticket_url']).",
               `details_date` = ".$this->db->escape($data['details_date']).",
               `details_time` = ".$this->db->escape($data['details_time'])."
             WHERE id = ".(int)$data['callout_id'].";";

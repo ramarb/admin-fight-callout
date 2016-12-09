@@ -76,6 +76,12 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-3 col-form-label">Ticket URL:</label>
+            <div class="col-sm-5">
+                <input type="text" name="ticket_url" value="<?php echo set_value('broadcast_url',$callout->ticket_url)?>" class="form-control" id="ticket_url" placeholder="" >
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="inputEmail3" class="col-sm-3 col-form-label">Schedule:</label>
             <div class="col-sm-5">
                 <input type="date" name="details_date" value="<?php echo set_value('details_date',$callout->details_date)?>" class="form-control" id="details_date" placeholder="" >
