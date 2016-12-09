@@ -7,7 +7,7 @@
     <?php $callout = $callout->row()?>
 
     <span class="d-block bg-primary callout-view-header rounded">
-                <?php echo $callout->fighter_a . ' VS ' . $callout->fighter_b?>
+                <?php echo $callout->title; ?>
         <div class="float-md-right">
             <a href="<?php echo base_url("{$_role}/{$controller}/")?>" class="btn btn-sm btn-info">Back</a>
         </div>

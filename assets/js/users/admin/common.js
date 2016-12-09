@@ -168,6 +168,7 @@ $(document).ready(function(){
 
     var menu_state = 1;
     $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
         $(".collapsible").click(function(e){
             e.preventDefault();
             var parent = this;

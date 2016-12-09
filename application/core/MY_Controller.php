@@ -62,7 +62,7 @@ class MY_Controller extends CI_Controller {
         );
 
         $this->css_header = css(array('bootstrap-4.0.0-alpha.5-dist/css/bootstrap.min','style'));
-        $this->js_header = javascript(array('bootstrap-4.0.0-alpha.5-dist/js/bootstrap.min'));
+        $this->js_header = javascript(array('bootstrap-4.0.0-alpha.5-dist/js/tether.min','bootstrap-4.0.0-alpha.5-dist/js/bootstrap.min'));
 	}
 
 	public function render($body, $data){

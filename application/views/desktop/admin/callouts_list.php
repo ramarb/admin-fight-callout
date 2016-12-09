@@ -2,7 +2,7 @@
 <table class="table table-bordered sortable" id="callout-list">
     <thead>
     <tr>
-        <th>Callout</th>
+        <th>Callout Title</th>
         <th>Description</th>
         <th>Date Created</th>
         <th>Category</th>
@@ -15,7 +15,7 @@
         <?php if(isset($callouts->result_id) && $callouts->result_id->num_rows > 0):?>
             <?php foreach($callouts->result() as $index => $value):?>
                 <tr>
-                    <td><a href="<?php echo base_url("{$_role}/{$controller}/detail/{$value->id}")?>"><?php echo $value->fighter_a . ' VS ' . $value->fighter_b?></a></td>
+                    <td><a href="<?php echo 'http://app.fightcallout.com/callout/'.$value->id?>" target="_blank" data-toggle="tooltip" title="View detail to app.callout.com site"><?php echo $value->title;?></a></td>
                     <td><?php echo $value->description?></td>
                     <td><?php echo date('m/d/Y',strtotime($value->created_at))?></td>
                     <td><?php echo $value->category?></td>
@@ -23,6 +23,9 @@
                     <td class="status-display"><?php echo $status[$value->status]?></td>
                     <td style="text-align: center;">
                         <input class="checkbox-event" type="checkbox" value="<?php echo $value->id?>">
+                        <a href="<?php echo base_url("{$_role}/{$controller}/detail/{$value->id}")?>" data-toggle="tooltip" title="Edit Callout Detail">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
                     </td>
                 </tr>
             <?php endforeach;?>
