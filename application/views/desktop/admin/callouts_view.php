@@ -9,14 +9,15 @@
         $title = "{$callout->full_name} CALLS-OUT {$callout->fighter_a} & {$callout->fighter_b} for a {$callout->category} {$callout->match_type}"
         ?>
         <span class="d-block bg-primary callout-view-header rounded">
-                <?php echo $title; ?>
+            &nbsp;
+            <div class="float-md-left">
+                <a href="<?php echo base_url("{$_role}/{$controller}/")?>" class="btn btn-sm btn-info">Back</a>
+                <a href="<?php echo 'http://app.fightcallout.com/callout/'.$callout->id?>" target="_blank" class="btn btn-sm btn-info">Back to landing page</a>
+            </div>
 
         </span>
         <div class="spacer" style="clear: both"></div>
-        <div class="float-md-left">
-            <a href="<?php echo base_url("{$_role}/{$controller}/")?>" class="btn btn-sm btn-info">Back</a>
-            <a href="<?php echo 'http://app.fightcallout.com/callout/'.$callout->id?>" target="_blank" class="btn btn-sm btn-info">Back to landing page</a>
-        </div>
+
     <div class="spacer" style="clear: both"></div>
 
     <form action="<?php echo base_url("{$_role}/{$controller}/validate_update_callout_form")?>" method="post" data-toggle="validator" role="form">
