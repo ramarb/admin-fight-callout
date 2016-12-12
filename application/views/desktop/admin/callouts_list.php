@@ -1,4 +1,5 @@
 <?php $status = array('A' => 'Active','D' => 'Deleted')?>
+<?php //p($callouts->result(),1)?>
 <table class="table table-bordered sortable" id="callout-list">
     <thead>
     <tr>
@@ -14,8 +15,12 @@
     <tbody>
         <?php if(isset($callouts->result_id) && $callouts->result_id->num_rows > 0):?>
             <?php foreach($callouts->result() as $index => $value):?>
+                <?php
+                $value->full_name = ((trim($value->full_name) !== '')?$value->full_name:"UNKNOWN");
+                $title = "{$value->full_name} CALLS-OUT {$value->fighter_a} & {$value->fighter_b} for a {$value->category} {$value->match_type}"
+                ?>
                 <tr>
-                    <td><a href="<?php echo 'http://app.fightcallout.com/callout/'.$value->id?>" target="_blank" data-toggle="tooltip" title="View detail to app.callout.com site"><?php echo $value->title;?></a></td>
+                    <td><a href="<?php echo 'http://app.fightcallout.com/callout/'.$value->id?>" target="_blank" data-toggle="tooltip" title="View detail to app.callout.com site"><?php echo $title;?></a></td>
                     <td><?php echo $value->description?></td>
                     <td><?php echo date('m/d/Y',strtotime($value->created_at))?></td>
                     <td><?php echo $value->category?></td>

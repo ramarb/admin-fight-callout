@@ -1,24 +1,30 @@
 
-
+<?php //p($callout->row(),1)?>
 <div class="container">
     <?php if(isset($callout->result_id->num_rows) && $callout->result_id->num_rows == 1):?>
         <?php $status = array('A' => 'Active','D' => 'Deleted')?>
         <?php $callout = $callout->row()?>
-
+        <?php
+        $callout->full_name = ((trim($callout->full_name) !== '')?$callout->full_name:"UNKNOWN");
+        $title = "{$callout->full_name} CALLS-OUT {$callout->fighter_a} & {$callout->fighter_b} for a {$callout->category} {$callout->match_type}"
+        ?>
         <span class="d-block bg-primary callout-view-header rounded">
-                <?php echo $callout->title; ?>
-            <div class="float-md-right">
-                <a href="<?php echo base_url("{$_role}/{$controller}/")?>" class="btn btn-sm btn-info">Back</a>
-            </div>
+                <?php echo $title; ?>
+
         </span>
-    <div class="spacer"></div>
+        <div class="spacer" style="clear: both"></div>
+        <div class="float-md-left">
+            <a href="<?php echo base_url("{$_role}/{$controller}/")?>" class="btn btn-sm btn-info">Back</a>
+            <a href="<?php echo 'http://app.fightcallout.com/callout/'.$callout->id?>" target="_blank" class="btn btn-sm btn-info">Back to landing page</a>
+        </div>
+    <div class="spacer" style="clear: both"></div>
 
     <form action="<?php echo base_url("{$_role}/{$controller}/validate_update_callout_form")?>" method="post" data-toggle="validator" role="form">
         <input type="hidden" name="callout_id" value="<?php echo set_value('title',$callout->id)?>" class="form-control" id="callout_id" placeholder="" >
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-3 col-form-label">Title:</label>
-            <div class="col-sm-5">
-                <input type="text" name="title" value="<?php echo set_value('title',$callout->title)?>" class="form-control" id="title" placeholder="" >
+            <div class="col-sm-7">
+                <input type="text" name="title" value="<?php echo $title?>" class="form-control" id="title" placeholder="" disabled>
             </div>
         </div>
         <div class="form-group row">
