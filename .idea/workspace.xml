@@ -39,7 +39,7 @@
       <file leaf-file-name="Callouts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/Callouts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="4440">
+            <state vertical-scroll-proportion="18.75" vertical-offset="495" max-vertical-offset="4440">
               <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
               <folding />
             </state>
@@ -88,6 +88,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Callouts_model.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/Callouts_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.52071005" vertical-offset="3610" max-vertical-offset="4455">
+              <caret line="270" column="14" selection-start-line="270" selection-start-column="14" selection-end-line="270" selection-end-column="14" />
+              <folding>
+                <marker date="1481585197825" expanded="true" signature="237:572" placeholder="SELECT callo..callouts..." />
+                <marker date="1481585197825" expanded="true" signature="690:992" placeholder="SELECT categ..categories..." />
+                <marker date="1481585197825" expanded="true" signature="752:834" placeholder="SELECT COUNT..callouts..." />
+                <marker date="1481585197825" expanded="true" signature="905:987" placeholder="SELECT COUNT..callouts..." />
+                <marker date="1481585197825" expanded="true" signature="1100:1136" placeholder="SELECT * FRO..categories..." />
+                <marker date="1481585197825" expanded="true" signature="1398:1436" placeholder="SELECT * FRO..roles$..." />
+                <marker date="1481585197825" expanded="true" signature="1686:1965" placeholder="SELECT users..users..." />
+                <marker date="1481585197825" expanded="true" signature="2735:2832" placeholder="SELECT * FRO..." />
+                <marker date="1481585197825" expanded="true" signature="3454:3541" placeholder="SELECT * FRO..." />
+                <marker date="1481585197825" expanded="true" signature="3618:3735" placeholder="INSERT INTO ..." />
+                <marker date="1481585197825" expanded="true" signature="4000:4763" placeholder="SELECT callo..callouts..." />
+                <marker date="1481585197825" expanded="true" signature="4184:4448" placeholder="SELECT CONCA..logs..." />
+                <marker date="1481585197825" expanded="true" signature="4995:5300" placeholder="SELECT comme..comments..." />
+                <marker date="1481585197825" expanded="true" signature="5597:5628" placeholder="SELECT * FRO..users..." />
+                <marker date="1481585197825" expanded="true" signature="6228:6342" placeholder="UPDATE users..." />
+                <marker date="1481585197825" expanded="true" signature="7022:7148" placeholder="INSERT INTO ..." />
+                <marker date="1481585197825" expanded="true" signature="7304:7427" placeholder="SELECT * FRO..users..." />
+                <marker date="1481585197825" expanded="true" signature="7721:7752" placeholder="SELECT * FRO..users..." />
+                <marker date="1481585197825" expanded="true" signature="7971:8570" placeholder="UPDATE users..." />
+                <marker date="1481585197825" expanded="true" signature="8788:9608" placeholder="UPDATE callo..." />
+                <marker date="1481585197825" expanded="true" signature="9791:9947" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="callouts_edit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/desktop/admin/callouts_edit.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,10 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="callouts_view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="callouts_view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/desktop/admin/callouts_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19186047" vertical-offset="0" max-vertical-offset="3225">
+            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="3225">
               <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -171,16 +203,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/desktop/admin/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="810">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="IdeDocumentHistory">
@@ -222,9 +244,9 @@
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/system/core/Log.php" />
         <option value="$PROJECT_DIR$/application/controllers/Login.php" />
-        <option value="$PROJECT_DIR$/application/models/Callouts_model.php" />
         <option value="$PROJECT_DIR$/application/views/desktop/admin/callouts_list.php" />
         <option value="$PROJECT_DIR$/application/views/desktop/admin/callouts_view.php" />
+        <option value="$PROJECT_DIR$/application/models/Callouts_model.php" />
       </list>
     </option>
   </component>
@@ -373,6 +395,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight_callout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fight_callout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -497,41 +537,27 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1725">
           <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT callo..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT categ..categories..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..categories..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..roles..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT users..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT callo..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..logs..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT comme..comments..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1481585197825" expanded="true" signature="237:572" placeholder="SELECT callo..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="690:992" placeholder="SELECT categ..categories..." />
+            <marker date="1481585197825" expanded="true" signature="752:834" placeholder="SELECT COUNT..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="905:987" placeholder="SELECT COUNT..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="1100:1136" placeholder="SELECT * FRO..categories..." />
+            <marker date="1481585197825" expanded="true" signature="1398:1436" placeholder="SELECT * FRO..roles$..." />
+            <marker date="1481585197825" expanded="true" signature="1686:1965" placeholder="SELECT users..users..." />
+            <marker date="1481585197825" expanded="true" signature="2735:2832" placeholder="SELECT * FRO..." />
+            <marker date="1481585197825" expanded="true" signature="3454:3541" placeholder="SELECT * FRO..." />
+            <marker date="1481585197825" expanded="true" signature="3618:3735" placeholder="INSERT INTO ..." />
+            <marker date="1481585197825" expanded="true" signature="4000:4763" placeholder="SELECT callo..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="4184:4448" placeholder="SELECT CONCA..logs..." />
+            <marker date="1481585197825" expanded="true" signature="4995:5300" placeholder="SELECT comme..comments..." />
+            <marker date="1481585197825" expanded="true" signature="5597:5628" placeholder="SELECT * FRO..users..." />
+            <marker date="1481585197825" expanded="true" signature="6228:6342" placeholder="UPDATE users..." />
+            <marker date="1481585197825" expanded="true" signature="7022:7148" placeholder="INSERT INTO ..." />
+            <marker date="1481585197825" expanded="true" signature="7304:7427" placeholder="SELECT * FRO..users..." />
+            <marker date="1481585197825" expanded="true" signature="7721:7752" placeholder="SELECT * FRO..users..." />
+            <marker date="1481585197825" expanded="true" signature="7971:8570" placeholder="UPDATE users..." />
+            <marker date="1481585197825" expanded="true" signature="8788:9608" placeholder="UPDATE callo..." />
+            <marker date="1481585197825" expanded="true" signature="9791:9947" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -790,50 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Callouts_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1741" max-vertical-offset="4455">
-          <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
-          <folding>
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT callo..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT categ..categories..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..categories..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..roles..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT users..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT callo..callouts..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..logs..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..comments..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT comme..comments..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="UPDATE callo..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1481583373582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/desktop/common/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="105">
@@ -893,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Callouts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="4440">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.0" vertical-offset="360" max-vertical-offset="4275">
@@ -919,7 +893,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/desktop/admin/callouts_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19186047" vertical-offset="0" max-vertical-offset="3225">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="3225">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -962,6 +936,44 @@
             <marker date="1481584900789" expanded="true" signature="9040:9348" placeholder="..." />
             <marker date="1481584900789" expanded="true" signature="9087:9348" placeholder="..." />
             <marker date="1481584900789" expanded="false" signature="9211:9224" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Callouts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="18.75" vertical-offset="495" max-vertical-offset="4440">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Callouts_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52071005" vertical-offset="3610" max-vertical-offset="4455">
+          <caret line="270" column="14" selection-start-line="270" selection-start-column="14" selection-end-line="270" selection-end-column="14" />
+          <folding>
+            <marker date="1481585197825" expanded="true" signature="237:572" placeholder="SELECT callo..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="690:992" placeholder="SELECT categ..categories..." />
+            <marker date="1481585197825" expanded="true" signature="752:834" placeholder="SELECT COUNT..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="905:987" placeholder="SELECT COUNT..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="1100:1136" placeholder="SELECT * FRO..categories..." />
+            <marker date="1481585197825" expanded="true" signature="1398:1436" placeholder="SELECT * FRO..roles$..." />
+            <marker date="1481585197825" expanded="true" signature="1686:1965" placeholder="SELECT users..users..." />
+            <marker date="1481585197825" expanded="true" signature="2735:2832" placeholder="SELECT * FRO..." />
+            <marker date="1481585197825" expanded="true" signature="3454:3541" placeholder="SELECT * FRO..." />
+            <marker date="1481585197825" expanded="true" signature="3618:3735" placeholder="INSERT INTO ..." />
+            <marker date="1481585197825" expanded="true" signature="4000:4763" placeholder="SELECT callo..callouts..." />
+            <marker date="1481585197825" expanded="true" signature="4184:4448" placeholder="SELECT CONCA..logs..." />
+            <marker date="1481585197825" expanded="true" signature="4995:5300" placeholder="SELECT comme..comments..." />
+            <marker date="1481585197825" expanded="true" signature="5597:5628" placeholder="SELECT * FRO..users..." />
+            <marker date="1481585197825" expanded="true" signature="6228:6342" placeholder="UPDATE users..." />
+            <marker date="1481585197825" expanded="true" signature="7022:7148" placeholder="INSERT INTO ..." />
+            <marker date="1481585197825" expanded="true" signature="7304:7427" placeholder="SELECT * FRO..users..." />
+            <marker date="1481585197825" expanded="true" signature="7721:7752" placeholder="SELECT * FRO..users..." />
+            <marker date="1481585197825" expanded="true" signature="7971:8570" placeholder="UPDATE users..." />
+            <marker date="1481585197825" expanded="true" signature="8788:9608" placeholder="UPDATE callo..." />
+            <marker date="1481585197825" expanded="true" signature="9791:9947" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

@@ -268,7 +268,6 @@ class Callouts_model extends CI_Model {
 
         $sql = "UPDATE callouts
             SET
-              `title` = ".$this->db->escape($data['title']).",
               `description` = ".$this->db->escape($data['callout_description']).",
               `fighter_a` = ".$this->db->escape($data['fighter_a']).",
               `fighter_b` = ".$this->db->escape($data['fighter_b']).",
