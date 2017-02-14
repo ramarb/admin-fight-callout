@@ -13,6 +13,7 @@ class Account extends MY_Controller_Admin {
     }
 
     public function index(){
+        $this->js_variables['controller_method'] = 'index';
         $this->render('dashboard',array());
     }
 

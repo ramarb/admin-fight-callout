@@ -28,9 +28,10 @@ $(document).ready(function(){
 
     });*/
 
-    $(".checkbox-event").click(function(){
+   /* $(".checkbox-event").click(function(){
         //alert($('input:checked').length);
-
+        //alert($('input[type="checkbox"]').length);
+//alert(8);
         init_description_form($('input:checked').length,$('input:checked').parent().parent('tr'));
 
         if($(this).is(':checked')){
@@ -39,6 +40,29 @@ $(document).ready(function(){
             $(this).parent().parent().removeClass('active');
         }
     });
+*/
+    /*$('input[value="29"]').click(function(){
+        alert(87);
+    });*/
+
+    setInterval(function() {
+        //alert($('input[value="29"]').data('events'));
+        $('input[type="checkbox"]').each(function(){
+            if($(this).hasClass('has-event') === false){
+                $(this).addClass('has-event');
+                $(this).click(function(){
+                    init_description_form($('input:checked').length,$('input:checked').parent().parent('tr'));
+
+                    if($(this).is(':checked')){
+                        $(this).parent().parent().addClass('active');
+                    }else{
+                        $(this).parent().parent().removeClass('active');
+                    }
+                });
+            }
+        });
+
+    }, 1000);
 
     init_description_form($('input:checked').length,$('input:checked').parent().parent('tr'));
 
